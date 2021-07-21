@@ -10,7 +10,7 @@ def get_chuck_norris_jokes():
     response = requests.get(api_url).json()
 
     return "<strong>Random joke from chuck norris: </strong> </br> {}".format(response["value"])+ \
-           "</br> <a href='http://127.0.0.1:5000/categories/'><button>Categories</button>"
+           "</br> <a href='https://vast-plateau-73090.herokuapp.com/categories'><button>Categories</button>"
 
 
 
@@ -20,8 +20,8 @@ def get_chuck_norris_categories():
     response = requests.get(api_url).json()
 
     return "<strong>Chuch Norris' Joke Categories: </strong> </br> {}".format(response) + \
-           "</br> <a href='http://127.0.0.1:5000/info/'><button>Info</button>" + \
-           "<a href='http://127.0.0.1:5000/'><button>Back</button>"
+           "</br> <a href='https://vast-plateau-73090.herokuapp.com//info/'><button>Info</button>" + \
+           "<a href='https://vast-plateau-73090.herokuapp.com/'><button>Back</button>"
 
 
 @app.route('/info/', methods=['GET'])
@@ -30,7 +30,7 @@ def get_chuck_norris_info():
     response = requests.get(api_url).json()
 
     return "<strong>Developer Stuff: </strong> </br> " + str(response) + \
-           "</br> <a href='http://127.0.0.1:5000/categories'><button>Back</button>"
+           "</br> <a href='https://vast-plateau-73090.herokuapp.com//categories'><button>Back</button>"
 
 
 if __name__ == "__main__":
